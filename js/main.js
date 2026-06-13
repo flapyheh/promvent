@@ -53,8 +53,9 @@ async function submitForm(e) {
   btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Отправка...';
   btn.disabled = true;
 
-  // Honeypot — если бот заполнил скрытое поле, делаем вид что всё ок
-  if (form.querySelector('[name="_honey"]')?.value) {
+  // Honeypot проверка
+  const honey = form.querySelector('[name="_honey"]');
+  if (honey?.value) {
     setTimeout(() => {
       alert('✅ Спасибо! Ваша заявка принята.');
       form.reset();
@@ -65,15 +66,15 @@ async function submitForm(e) {
     return;
   }
 
-  // Собираем данные формы
+  // Собираем данные БЕЗ honeypot-поля
   const formData = new FormData(form);
+  formData.delete('_honey'); // ← ВАЖНО: убираем, чтобы не конфликтовать с FormSubmit
 
-  // Служебные поля FormSubmit
   formData.append('_subject', '🔔 Новая заявка с сайта КлиматПрофи');
-  formData.append('_template', 'table');     // красивый табличный вид письма
-  formData.append('_captcha', 'false');      // отключаем редирект на капчу
+  formData.append('_template', 'table');
+  formData.append('_captcha', 'false');
   formData.append('Источник', document.title);
-  formData.append('Дата',     new Date().toLocaleString('ru-RU'));
+  formData.append('Дата', new Date().toLocaleString('ru-RU'));
 
   try {
     const res = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
@@ -81,25 +82,28 @@ async function submitForm(e) {
       headers: { 'Accept': 'application/json' },
       body: formData
     });
-    const json = await res.json();
 
-    if (json.success === 'true' || json.success === true) {
+    // Пытаемся прочитать JSON, но не падаем если его нет
+    let json = {};
+    try { json = await res.json(); } catch (_) {}
+
+    // Считаем успехом ЛЮБОЙ 2xx ответ — это надёжнее, чем смотреть на json.success
+    if (res.ok) {
       alert('✅ Спасибо! Ваша заявка принята.\nМы перезвоним вам в течение 15 минут.');
       form.reset();
       closeModal();
     } else {
+      console.error('FormSubmit response:', res.status, json);
       alert('⚠️ Не удалось отправить заявку. Позвоните нам по телефону.');
-      console.error(json);
     }
   } catch (err) {
-    alert('⚠️ Ошибка отправки. Проверьте интернет или позвоните нам.');
     console.error(err);
+    alert('⚠️ Ошибка отправки. Проверьте интернет или позвоните нам.');
   } finally {
     btn.innerHTML = originalContent;
     btn.disabled = false;
   }
 }
-
 
 // ============== PHONE MASK ==============
 document.querySelectorAll('input[type="tel"]').forEach(input => {
