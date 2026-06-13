@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>КлиматПрофи Пермь — продажа и монтаж кондиционеров под ключ</title>
+<meta name="description" content="Профессиональная установка и продажа кондиционеров в Перми. Гарантия 3 года, выезд замерщика бесплатно, монтаж от 14 000 ₽. Звоните!">
+<meta name="keywords" content="кондиционеры Пермь, монтаж кондиционеров, установка сплит-системы, купить кондиционер Пермь">
+
+<!-- Preconnect для шрифтов и изображений -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+
+<!-- Современный шрифт -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Иконки -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS — анимации при скролле -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<!-- Стили -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-left">
+      <span><i class="fa-solid fa-location-dot"></i> г. Пермь, ул. Николая Островского, 109</span>
+      <span><i class="fa-regular fa-clock"></i> Пн–Пт: 9:00–20:00, Сб: 10:00–18:00</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="https://wa.me/79024760186"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://t.me/tepaaaaaaaa"><i class="fa-brands fa-telegram"></i> Telegram</a>
+      <a href="mailto:klimatprofiperm@gmail.com"><i class="fa-regular fa-envelope"></i> klimatprofiperm@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-snowflake logo-icon"></i>
+        <div>
+          <div class="logo-text">Климат<span>Профи</span></div>
+          <div class="logo-sub">Пермь · с 2014 года</div>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#steps">Как работаем</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="contact-block">
+        <div class="phone-wrap">
+          <a href="tel:+73422000000" class="phone">+7 (902) 476-01-86</a>
+          <span class="phone-sub">Звонок бесплатный</span>
+        </div>
+        <button class="btn btn-primary" onclick="openModal()">
+          <i class="fa-solid fa-phone-volume"></i> Заказать звонок
+        </button>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
+      <div class="hero-badge">
+        <i class="fa-solid fa-medal"></i> №1 в Перми по отзывам клиентов
+      </div>
+      <h1>Продажа и монтаж<br><span class="accent">кондиционеров</span> в Перми<br>под ключ</h1>
+      <p>Профессиональная установка сплит-систем для квартир, офисов и промышленных объектов. Гарантия 1 год. Работаем по всему Пермскому краю.</p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" onclick="scrollToForm()">
+          <i class="fa-solid fa-calculator"></i> Рассчитать стоимость
+        </button>
+        <a href="tel:+79024760186" class="btn btn-outline btn-lg">
+          <i class="fa-solid fa-phone"></i> Позвонить
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Договор и гарантия</div>
+        <div class="trust-item"><i class="fa-solid fa-truck-fast"></i> Выезд за 24 часа</div>
+        <div class="trust-item"><i class="fa-solid fa-ruble-sign"></i> Без переплат</div>
+      </div>
+    </div>
+
+    <div class="hero-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+      <h3>Быстрый расчёт</h3>
+      <p class="hero-card-sub">Перезвоним за 15 минут с готовой ценой</p>
+      <form onsubmit="submitForm(event)" class="hero-form">
+        <input type="text" name="Имя"     placeholder="Ваше имя" required>
+        <input type="tel"  name="Телефон" placeholder="+7 (___) ___-__-__" required>
+        <select name="Тип объекта">
+          <option>Квартира до 30 м²</option>
+          <option>Квартира 30–60 м²</option>
+          <option>Квартира более 60 м²</option>
+          <option>Офис / коммерция</option>
+          <option>Промышленный объект</option>
+        </select>
+        <!-- honeypot -->
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off"
+              style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+        <button type="submit" class="btn btn-primary btn-block">
+          Получить расчёт <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <p class="form-note"><i class="fa-solid fa-lock"></i> Ваши данные надёжно защищены</p>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="hero-features">
+    <div class="container hero-features-inner">
+      <div class="hero-feature" data-aos="zoom-in" data-aos-delay="100">
+        <div class="hf-num">от 14 000 ₽</div>
+        <div class="hf-label">Монтаж под ключ</div>
+      </div>
+      <div class="hero-feature" data-aos="zoom-in" data-aos-delay="200">
+        <div class="hf-num">1 год</div>
+        <div class="hf-label">Гарантия на монтаж</div>
+      </div>
+      <div class="hero-feature" data-aos="zoom-in" data-aos-delay="300">
+        <div class="hf-num">1–2 дня</div>
+        <div class="hf-label">Срок установки</div>
+      </div>
+      <div class="hero-feature" data-aos="zoom-in" data-aos-delay="400">
+        <div class="hf-num">180+</div>
+        <div class="hf-label">Установок в год</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brands -->
+<section class="brands">
+  <div class="container">
+    <p class="brands-title">Работаем с ведущими брендами</p>
+    <div class="brands-grid">
+      <div class="brand">Daikin</div>
+      <div class="brand">Mitsubishi</div>
+      <div class="brand">Samsung</div>
+      <div class="brand">LG</div>
+      <div class="brand">Haier</div>
+      <div class="brand">Ballu</div>
+      <div class="brand">Electrolux</div>
+      <div class="brand">Hisense</div>
+    </div>
+  </div>
+</section>
+
+<!-- Advantages -->
+<section class="advantages" id="advantages">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Преимущества</span>
+      <h2>Почему выбирают <span class="accent">КлиматПрофи</span></h2>
+      <p class="section-subtitle">Более 10 лет помогаем жителям Перми создавать комфортный климат в доме и офисе</p>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="adv-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Гарантия 3 года</h3>
+        <p>Официальная гарантия на монтажные работы и заводская гарантия на оборудование.</p>
+      </div>
+      <div class="adv-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="adv-icon"><i class="fa-solid fa-file-contract"></i></div>
+        <h3>Договор и документы</h3>
+        <p>Заключаем договор, выдаём чек и гарантийный талон на все работы.</p>
+      </div>
+      <div class="adv-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="adv-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Профессиональный инструмент</h3>
+        <p>Монтажники оснащены оборудованием европейских производителей.</p>
+      </div>
+      <div class="adv-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="adv-icon"><i class="fa-solid fa-broom"></i></div>
+        <h3>Чистота монтажа</h3>
+        <p>Аккуратно работаем и убираем после себя — место сдаём в опрятном виде.</p>
+      </div>
+      <div class="adv-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="adv-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <h3>Быстрый выезд</h3>
+        <p>Замерщик приедет в течение 24 часов после заявки. Бесплатно.</p>
+      </div>
+      <div class="adv-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="adv-icon"><i class="fa-solid fa-ruble-sign"></i></div>
+        <h3>Честные цены</h3>
+        <p>Фиксированная стоимость в договоре. Никаких доплат «по факту».</p>
+      </div>
+      <div class="adv-card" data-aos="fade-up" data-aos-delay="350">
+        <div class="adv-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <h3>Опытные мастера</h3>
+        <p>Все монтажники — сертифицированные специалисты со стажем от 5 лет.</p>
+      </div>
+      <div class="adv-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="adv-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Сервис 24/7</h3>
+        <p>Поддержка клиентов и приём заявок круглосуточно, без выходных.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Услуги</span>
+      <h2>Что мы предлагаем</h2>
+      <p class="section-subtitle">Полный спектр работ с климатической техникой — от подбора до сервиса</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="service-img">
+          <img src="img/bit.webp" alt="Бытовые сплит-системы" loading="lazy">
+          <span class="service-tag">Хит</span>
+        </div>
+        <div class="service-body">
+          <h3>Бытовые сплит-системы</h3>
+          <p>Установка кондиционеров для квартир, частных домов и небольших офисов.</p>
+          <ul>
+            <li>Подбор по площади помещения</li>
+            <li>Стандартный монтаж до 2 м трассы</li>
+            <li>Пусконаладка и тест</li>
+          </ul>
+          <div class="service-footer">
+            <div class="price">от 14 000 ₽</div>
+            <button class="btn btn-primary" onclick="scrollToForm()">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-img">
+          <img src="img/multi.jpeg" alt="Мульти-сплит системы" loading="lazy">
+        </div>
+        <div class="service-body">
+          <h3>Мульти-сплит системы</h3>
+          <p>Один внешний блок и несколько внутренних — идеально для квартир и домов.</p>
+          <ul>
+            <li>Проектирование трасс</li>
+            <li>Монтаж 2–5 внутренних блоков</li>
+            <li>Скрытая прокладка коммуникаций</li>
+          </ul>
+          <div class="service-footer">
+            <div class="price">от 28 000 ₽</div>
+            <button class="btn btn-primary" onclick="scrollToForm()">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="service-img">
+          <img src="img/prom.jpeg" alt="Промышленные кондиционеры" loading="lazy">
+        </div>
+        <div class="service-body">
+          <h3>Промышленные системы</h3>
+          <p>Канальные, кассетные и колонные системы для магазинов, ресторанов, складов.</p>
+          <ul>
+            <li>Расчёт нагрузки</li>
+            <li>Монтаж VRF/VRV систем</li>
+            <li>Сервисное обслуживание</li>
+          </ul>
+          <div class="service-footer">
+            <div class="price">по проекту</div>
+            <button class="btn btn-primary" onclick="scrollToForm()">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1597423498219-04418210827d?w=600&q=80" alt="Обслуживание и ремонт" loading="lazy">
+        </div>
+        <div class="service-body">
+          <h3>Обслуживание и ремонт</h3>
+          <p>Чистка, заправка фреоном, диагностика и ремонт кондиционеров любых брендов.</p>
+          <ul>
+            <li>Чистка внутреннего блока</li>
+            <li>Антибактериальная обработка</li>
+            <li>Заправка R410a, R32</li>
+          </ul>
+          <div class="service-footer">
+            <div class="price">от 2 500 ₽</div>
+            <button class="btn btn-primary" onclick="scrollToForm()">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&q=80" alt="Демонтаж и перенос" loading="lazy">
+        </div>
+        <div class="service-body">
+          <h3>Демонтаж и перенос</h3>
+          <p>Аккуратный демонтаж и перенос сплит-системы на новое место.</p>
+          <ul>
+            <li>Сохранение фреона</li>
+            <li>Проверка герметичности</li>
+            <li>Повторная установка</li>
+          </ul>
+          <div class="service-footer">
+            <div class="price">от 5 000 ₽</div>
+            <button class="btn btn-primary" onclick="scrollToForm()">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=600&q=80" alt="Высотные работы" loading="lazy">
+        </div>
+        <div class="service-body">
+          <h3>Высотные работы</h3>
+          <p>Промышленный альпинизм и автовышка для установки на фасадах высоток.</p>
+          <ul>
+            <li>Аттестованные альпинисты</li>
+            <li>Страховка и допуски</li>
+            <li>Работа на любой высоте</li>
+          </ul>
+          <div class="service-footer">
+            <div class="price">от 4 000 ₽</div>
+            <button class="btn btn-primary" onclick="scrollToForm()">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Steps -->
+<section class="steps" id="steps">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Как работаем</span>
+      <h2>5 шагов до прохлады в доме</h2>
+      <p class="section-subtitle">Простой и понятный процесс от заявки до запуска</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step" data-aos="fade-up" data-aos-delay="50">
+        <div class="step-num">1</div>
+        <div class="step-icon"><i class="fa-solid fa-phone"></i></div>
+        <h4>Заявка</h4>
+        <p>Позвоните или оставьте заявку на сайте</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="150">
+        <div class="step-num">2</div>
+        <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
+        <h4>Консультация</h4>
+        <p>Менеджер уточнит детали и подберёт модель</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="250">
+        <div class="step-num">3</div>
+        <div class="step-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+        <h4>Замер</h4>
+        <p>Замерщик бесплатно оценит место работ</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="350">
+        <div class="step-num">4</div>
+        <div class="step-icon"><i class="fa-solid fa-file-signature"></i></div>
+        <h4>Договор</h4>
+        <p>Фиксируем цену и сроки в договоре</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="450">
+        <div class="step-num">5</div>
+        <div class="step-icon"><i class="fa-solid fa-snowflake"></i></div>
+        <h4>Монтаж</h4>
+        <p>Команда выезжает и устанавливает «под ключ»</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="prices" class="prices">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Прайс-лист</span>
+      <h2>Стоимость монтажа</h2>
+      <p class="section-subtitle">Прозрачные цены на стандартный монтаж сплит-системы настенного типа</p>
+    </div>
+    <div class="price-table-wrap" data-aos="fade-up">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Наименование работ</th>
+            <th>Ед. изм.</th>
+            <th>Цена</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><i class="fa-solid fa-snowflake price-ico"></i> Монтаж сплит-системы (до 2,5 кВт), трасса до 2 м</td>
+            <td>шт.</td>
+            <td class="price-cell">14 000 ₽</td>
+            <td><button class="btn btn-sm btn-primary" onclick="scrollToForm()">Заказать</button></td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-snowflake price-ico"></i> Монтаж сплит-системы (2,5–3,5 кВт)</td>
+            <td>шт.</td>
+            <td class="price-cell">16 500 ₽</td>
+            <td><button class="btn btn-sm btn-primary" onclick="scrollToForm()">Заказать</button></td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-snowflake price-ico"></i> Монтаж сплит-системы (3,5–7 кВт)</td>
+            <td>шт.</td>
+            <td class="price-cell">от 19 000 ₽</td>
+            <td><button class="btn btn-sm btn-primary" onclick="scrollToForm()">Заказать</button></td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-bolt price-ico"></i> Пусконаладочные работы</td>
+            <td>шт.</td>
+            <td class="price-cell">1 000 ₽</td>
+            <td><button class="btn btn-sm btn-primary" onclick="scrollToForm()">Заказать</button></td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-arrows-left-right price-ico"></i> Удлинение трассы</td>
+            <td>м.п.</td>
+            <td class="price-cell">1 200 ₽</td>
+            <td><button class="btn btn-sm btn-primary" onclick="scrollToForm()">Заказать</button></td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-hammer price-ico"></i> Штробление стены</td>
+            <td>м.п.</td>
+            <td class="price-cell">от 600 ₽</td>
+            <td><button class="btn btn-sm btn-primary" onclick="scrollToForm()">Заказать</button></td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-temperature-low price-ico"></i> Установка зимнего комплекта</td>
+            <td>шт.</td>
+            <td class="price-cell">3 500 ₽</td>
+            <td><button class="btn btn-sm btn-primary" onclick="scrollToForm()">Заказать</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note"><i class="fa-solid fa-circle-info"></i> Стоимость более мощных моделей и нестандартных работ уточняйте у менеджера</p>
+  </div>
+</section>
+
+<!-- Includes -->
+<section class="includes">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Что входит</span>
+      <h2>Состав стандартного монтажа</h2>
+      <p class="section-subtitle">Никаких сюрпризов — всё прозрачно и зафиксировано в договоре</p>
+    </div>
+    <div class="includes-grid">
+      <div class="includes-box" data-aos="fade-right">
+        <div class="includes-head">
+          <i class="fa-solid fa-box-open"></i>
+          <h3>Материалы в комплекте</h3>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Медные трубки — 2 шт. по 2 м</li>
+          <li><i class="fa-solid fa-check"></i> Межблочный кабель — 2 м</li>
+          <li><i class="fa-solid fa-check"></i> Дренажный шланг — 2 м</li>
+          <li><i class="fa-solid fa-check"></i> Тефлоновая лента — 2 м</li>
+          <li><i class="fa-solid fa-check"></i> Монтажная пена</li>
+          <li><i class="fa-solid fa-check"></i> Декоративный короб 60×60 мм — до 1 м</li>
+        </ul>
+      </div>
+      <div class="includes-box dark" data-aos="fade-left">
+        <div class="includes-head">
+          <i class="fa-solid fa-toolbox"></i>
+          <h3>Нестандартный монтаж</h3>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-plus"></i> Установка в любом удобном месте</li>
+          <li><i class="fa-solid fa-plus"></i> Промышленный альпинизм</li>
+          <li><i class="fa-solid fa-plus"></i> Удлинение трассы более 5 м</li>
+          <li><i class="fa-solid fa-plus"></i> Штробление стен под коммуникации</li>
+          <li><i class="fa-solid fa-plus"></i> Монтаж в два этапа</li>
+          <li><i class="fa-solid fa-plus"></i> Демонтаж фасадной плитки</li>
+          <li><i class="fa-solid fa-plus"></i> Привлечение автовышки</li>
+          <li><i class="fa-solid fa-plus"></i> Установка дренажной помпы</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery / Portfolio -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Портфолио</span>
+      <h2>Наши работы</h2>
+      <p class="section-subtitle">Более 500 успешных установок в Перми и Пермском крае</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="50">
+        <img src="img/sib.jpeg"
+             alt="Установка кондиционера в квартире" loading="lazy"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/ac1/800/600';">
+        <div class="gallery-caption">Квартира на ул. Сибирской</div>
+      </div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+        <img src="img/lubimov.webp"
+             alt="Монтаж мульти-сплит системы" loading="lazy"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/ac2/800/600';">
+        <div class="gallery-caption">Мульти-сплит, БЦ «Любимов»</div>
+      </div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
+        <img src="img/ural.webp"
+             alt="Промышленный кондиционер" loading="lazy"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/srvN/600/400';">
+        <div class="gallery-caption">Ресторан «Урал»</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section" data-aos="fade-up">
+  <div class="container cta-inner">
+    <div class="cta-text">
+      <h2>Получите бесплатный замер<br>и расчёт стоимости</h2>
+      <p>Замерщик приедет в удобное вам время. Расчёт — за 15 минут.</p>
+    </div>
+    <button class="btn btn-white btn-lg" onclick="scrollToForm()">
+      <i class="fa-solid fa-ruler-combined"></i> Вызвать замерщика
+    </button>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Отзывы</span>
+      <h2>Что говорят клиенты</h2>
+      <p class="section-subtitle">Средняя оценка 4.9 из 5 на Яндекс.Картах и 2ГИС</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">«Заказывали установку кондиционера в трёхкомнатную квартиру. Приехали вовремя, всё сделали аккуратно, никакого мусора. Цена в договоре не изменилась. Очень довольны!»</p>
+        <div class="review-author">
+          <div class="review-avatar">А</div>
+          <div>
+            <div class="review-name">Анна Корнилова</div>
+            <div class="review-date">март 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">«Ставили мульти-сплит на 3 комнаты в новом доме. Сделали скрытую прокладку трасс ещё до отделки. Работают тихо, охлаждают отлично. Спасибо за профессионализм!»</p>
+        <div class="review-author">
+          <div class="review-avatar">Д</div>
+          <div>
+            <div class="review-name">Дмитрий Старков</div>
+            <div class="review-date">февраль 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">«Обслуживаем у ребят кондиционеры в офисе уже 3 года. Всё чётко: приезжают по графику, делают качественно. Появилась проблема — устранили в тот же день. Рекомендую!»</p>
+        <div class="review-author">
+          <div class="review-avatar">И</div>
+          <div>
+            <div class="review-name">Игорь Петров</div>
+            <div class="review-date">январь 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Вопросы и ответы</span>
+      <h2>Часто задаваемые вопросы</h2>
+      <p class="section-subtitle">Не нашли ответ? <a href="#form">Напишите нам</a> — поможем</p>
+    </div>
+    <div class="faq-wrap" data-aos="fade-up">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Сколько времени занимает установка кондиционера?</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer"><p>Стандартный монтаж бытовой сплит-системы занимает 3–5 часов. Сложные работы (штробление, мульти-сплит, альпинизм) могут занять 1–2 рабочих дня.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Какой кондиционер выбрать для квартиры?</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer"><p>Мощность подбирается из расчёта 1 кВт холода на 10 м² при стандартной высоте потолков. Наш менеджер бесплатно поможет выбрать модель с учётом площади, инсоляции и количества техники в комнате.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Работаете ли вы по Пермскому краю?</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer"><p>Да, мы выезжаем по всему Пермскому краю: Пермь, Березники, Соликамск, Краснокамск, Чайковский, Лысьва и другие города. Стоимость выезда в отдалённые районы обсуждается индивидуально.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Можно ли установить кондиционер зимой?</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer"><p>Да, мы устанавливаем кондиционеры круглый год. Для зимней эксплуатации (работа на обогрев при -15°C и ниже) рекомендуем установить «зимний комплект» — он обеспечит работу системы при температурах до -30°C.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Даёте ли гарантию?</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer"><p>Да, мы даём гарантию 3 года на монтажные работы и официальную заводскую гарантию на оборудование (от 1 до 5 лет в зависимости от производителя).</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Можно ли купить кондиционер у вас и установить самостоятельно?</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer"><p>Да, мы продаём кондиционеры без обязательного монтажа. Но напоминаем: самостоятельная установка лишает вас гарантии производителя на оборудование.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Form -->
+<section class="form-section" id="form">
+  <div class="container">
+    <div class="form-grid">
+      <div class="form-info" data-aos="fade-right">
+        <span class="section-tag">Заявка</span>
+        <h2>Оставьте заявку</h2>
+        <p>Перезвоним в течение 15 минут, ответим на вопросы и рассчитаем точную стоимость работ.</p>
+        <div class="form-contacts">
+          <div class="form-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <small>Телефон</small>
+              <a href="tel:+79024760186">+7 (902) 476-01-86</a>
+            </div>
+          </div>
+          <div class="form-contact-item">
+            <i class="fa-regular fa-envelope"></i>
+            <div>
+              <small>Email</small>
+              <a href="mailto:klimatprofiperm@gmail.com ">klimatprofiperm@gmail.com</a>
+            </div>
+          </div>
+          <div class="form-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <small>Адрес</small>
+              <span>г. Пермь, ул. Николая Островского, 109</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-wrapper" data-aos="fade-left">
+        <form onsubmit="submitForm(event)">
+          <div class="form-group">
+            <label for="name">Ваше имя *</label>
+            <input type="text" id="name" name="Имя" required placeholder="Иван">
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон *</label>
+            <input type="tel" id="phone" name="Телефон" required placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="form-group">
+            <label for="service">Услуга</label>
+            <select id="service" name="Услуга">
+              <option>Продажа и монтаж кондиционера</option>
+              <option>Только монтаж</option>
+              <option>Обслуживание / ремонт</option>
+              <option>Демонтаж и перенос</option>
+              <option>Промышленные системы</option>
+              <option>Консультация</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Комментарий</label>
+            <textarea id="message" name="Комментарий" rows="3" placeholder="Площадь помещения, этаж, особенности..."></textarea>
+          </div>
+          <!-- honeypot -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off"
+                style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            <i class="fa-solid fa-paper-plane"></i> Отправить заявку
+          </button>
+          <p class="form-note"><i class="fa-solid fa-lock"></i> Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contacts">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo footer-logo">
+          <i class="fa-solid fa-snowflake logo-icon"></i>
+          <div>
+            <div class="logo-text">Климат<span>Профи</span></div>
+            <div class="logo-sub">Пермь · с 2014 года</div>
+          </div>
+        </div>
+        <p>Профессиональная продажа и монтаж кондиционеров в Перми и Пермском крае.</p>
+        <div class="socials">
+          <a href="https://wa.me/79024760186" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://t.me/tepaaaaaaaa" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <a href="tel:+79024760186"><i class="fa-solid fa-phone"></i> +7 (902) 476-01-86</a>
+        <a href="mailto:klimatprofiperm@gmail.com"><i class="fa-regular fa-envelope"></i>klimatprofiperm@gmail.com</a>
+        <p><i class="fa-solid fa-location-dot"></i> г. Пермь, ул. Николая Островского, 109</p>
+      </div>
+      <div class="footer-col">
+        <h4>Режим работы</h4>
+        <p><i class="fa-regular fa-clock"></i> Пн–Пт: 9:00 – 20:00</p>
+        <p><i class="fa-regular fa-clock"></i> Сб: 10:00 – 18:00</p>
+        <p><i class="fa-regular fa-clock"></i> Вс: по заявкам</p>
+      </div>
+      <div class="footer-col">
+        <h4>Услуги</h4>
+        <a href="#services">Монтаж кондиционеров</a>
+        <a href="#services">Обслуживание и ремонт</a>
+        <a href="#prices">Цены</a>
+        <a href="#form">Связаться с нами</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 КлиматПрофи Пермь. Все права защищены.</span>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating buttons -->
+<div class="float-actions">
+  <a href="https://wa.me/79024760186" class="float-btn whatsapp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="tel:+79024760186" class="float-btn phone-btn" title="Позвонить"><i class="fa-solid fa-phone"></i></a>
+</div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Наверх"><i class="fa-solid fa-chevron-up"></i></button>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Закрыть">&times;</button>
+    <div class="modal-icon"><i class="fa-solid fa-phone-volume"></i></div>
+    <h3>Заказать обратный звонок</h3>
+    <p class="modal-sub">Перезвоним в течение 15 минут</p>
+    <form onsubmit="submitForm(event)">
+      <div class="form-group">
+        <label>Ваше имя</label>
+        <input type="text" name="Имя" required placeholder="Иван">
+      </div>
+      <div class="form-group">
+        <label>Телефон</label>
+        <input type="tel" name="Телефон" required placeholder="+7 (___) ___-__-__">
+      </div>
+      <!-- honeypot -->
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off"
+            style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+      <button type="submit" class="btn btn-primary btn-block btn-lg">
+        <i class="fa-solid fa-phone"></i> Жду звонка
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- AOS Animation library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Main script -->
+<script src="js/main.js"></script>
+</body>
+</html>
