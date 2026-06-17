@@ -307,7 +307,6 @@ section { padding: 100px 0; }
 .service-img img {
   width: 100%; height: 100%; object-fit: cover;
   transition: 0.5s ease;
-  transform: scale(0.92);
 }
 .service-card:hover .service-img img { transform: scale(1.08); }
 .service-tag {
