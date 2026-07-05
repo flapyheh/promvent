@@ -1,5 +1,5 @@
 // ============== НАСТРОЙКИ ==============
-const FORMSUBMIT_EMAIL = 'klimatprofiperm@gmail.com'; // ← УКАЖИ СВОЮ ПОЧТУ
+const FORMSUBMIT_EMAIL = 'promvent.perm@gmail.com'; // ← УКАЖИ СВОЮ ПОЧТУ
 
 // ============== INIT AOS ==============
 document.addEventListener('DOMContentLoaded', () => {
