@@ -690,4 +690,92 @@ footer {
   margin-left:6px;
   vertical-align:middle
 }
+/* ============== DIRECTIONS (три направления) ============== */
+.directions { padding: 100px 0; background: #fff; }
+.dir-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+.dir-card {
+  background: #fff; padding: 40px 32px; border-radius: var(--radius-lg);
+  border: 2px solid var(--border); transition: var(--transition);
+  position: relative; overflow: hidden;
+}
+.dir-card:hover {
+  transform: translateY(-8px); box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+.dir-card.highlight {
+  background: var(--gradient); color: #fff;
+  border-color: transparent;
+  box-shadow: 0 20px 50px rgba(10, 77, 156, 0.25);
+}
+.dir-card.highlight h3,
+.dir-card.highlight p { color: #fff; }
+.dir-card.highlight ul li { color: rgba(255,255,255,0.92); }
+.dir-card.highlight ul li::before {
+  background: rgba(255,255,255,0.25); color: #fff;
+}
+.dir-icon {
+  width: 72px; height: 72px; border-radius: 18px;
+  background: var(--gradient-accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 30px; margin-bottom: 22px;
+  box-shadow: 0 10px 24px rgba(30,136,229,0.4);
+}
+.dir-card.highlight .dir-icon {
+  background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+}
+.dir-tag {
+  display: inline-block; background: rgba(30,136,229,0.12);
+  color: var(--accent); padding: 5px 14px; border-radius: 50px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; margin-bottom: 14px;
+}
+.dir-tag.new {
+  background: #ff6b35; color: #fff;
+}
+.dir-card.highlight .dir-tag.new {
+  background: #ff6b35; color: #fff;
+}
+.dir-card h3 {
+  color: var(--primary-dark); font-size: 26px; margin-bottom: 14px;
+  font-weight: 800;
+}
+.dir-card > p {
+  color: var(--text-light); font-size: 15px; margin-bottom: 22px;
+}
+.dir-card ul { display: flex; flex-direction: column; gap: 8px; }
+.dir-card ul li {
+  padding: 8px 0 8px 30px; position: relative;
+  font-size: 14.5px; color: var(--text);
+}
+.dir-card ul li::before {
+  content: "✓"; position: absolute; left: 0; top: 8px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(30,136,229,0.12); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800;
+}
 
+/* ============== NEW TAG (для секций) ============== */
+.new-tag {
+  background: #ff6b35 !important;
+  color: #fff !important;
+}
+
+/* Секция кондиционеров */
+.ac-highlight { background: var(--bg-soft); }
+
+/* Сервисный тег "Новое" */
+.service-tag.new {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  box-shadow: 0 6px 14px rgba(255, 107, 53, 0.45);
+}
+
+/* Steps: вариант на 6 шагов */
+.steps-6 {
+  grid-template-columns: repeat(6, 1fr) !important;
+}
+.steps-6::before {
+  left: 8% !important; right: 8% !important;
+}
